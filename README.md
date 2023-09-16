@@ -1,1 +1,1 @@
-# gitlab-ci-training
+# GITLAB-CI TRAINING
