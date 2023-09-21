@@ -7,7 +7,7 @@ LinkedIn      : https://www.linkedin.com/in/gkossi/
 
 # LAB 1 : BUILD
 - Créez un compte sur gitlab.com
-- Créez un repo
+- Créez un repository
 - Récupérez le code de l'application et poussez le sur votre repo https://github.com/eazytrainingfr/alpinehelloworld.git
 - Créez votre fichier .gitlab-ci.yml
 - Créez un job qui va permettre de builder votre application sous forme d'image docker à partir du Dockerfile fourni dans le dossier de l'application
