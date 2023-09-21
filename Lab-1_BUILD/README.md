@@ -53,18 +53,18 @@ docker run -d --name gitlab-runner --restart always \
 -v /data/gitlab/runner:/etc/gitlab-runner \
 gitlab/gitlab-runner:latest
 ```
-> ![1-Création du runner] ![](images/runner.png)
+> ![2-Création du runner] ![](images/runner.png)
 
 - Une fois notre runner créé, il faut l'enregistrer pour qu'il soit visible sur gitlab.com pour etre utilisé.
 
 Pour cela, je vais aller copier le token sur gitlab.com
 
-> ![1-Copie du Token sur gitlab.com] ![](images/copie-token.jpg)
+> ![3-Copie du Token sur gitlab.com] ![](images/copie-token.jpg)
 
 ```bash
 export TOKEN=mon-token-copié
 ```
-> ![1-Enregistrement du runner] ![](images/enregistrement-token.png)
+> ![4-Enregistrement du runner] ![](images/enregistrement-token.png)
 
 - Enregistrer le runner avec le jeton d'enregistrement (cette structure de commande s'applique seulement aux registre encours d'exécution dans un conteneur Docker) :
 ```bash
@@ -82,9 +82,9 @@ docker run --rm -v /data/gitlab/runner/:/etc/gitlab-runner gitlab/gitlab-runner 
   --docker-privileged \
   --docker-volumes '/var/run/docker.sock:/var/run/docker.sock'
 ```
-> ![1-Enregistrement du runner] ![](images/enregistrement-runner.jpg)
+> ![5-Enregistrement du runner] ![](images/enregistrement-runner.png)
 
-> ![1-Vérification du runner sur gitlab.com] ![](images/runner-sur-gitlab.png)
+> ![6-Vérification du runner sur gitlab.com] ![](images/runner-sur-gitlab.png)
 
 NB : il faut s'assurer de désactiver le runner partagé sur gitlab.com
 
@@ -92,8 +92,35 @@ NB : il faut s'assurer de désactiver le runner partagé sur gitlab.com
 ## Etape N°2: Configuration du fichier .gitlab-ci.yml pour la réalisation du BUILD de l'image
 
 ```bash
+#Définition de l'environnement d'exécution de notre pipeline
+image: docker:latest
 
+#Création du service permettant d'utiliser du docker dans docker
+services:
+  - name: docker:dind
+
+#Définition des différentes étapes
+stages:
+  - Build image
+
+#JOB N°1 : Définition du job dans lequel sera exécuter l'étape du build de l'image
+build:
+  stage: Build image
+  script:
+    #Script pour builder l'image
+    - docker build -t alpinehelloworld .
+    #Script pour sauvegarder l'image en artefact
+    - docker save alpinehelloworld > alpinehelloworld.tar
+  #On va définir le fichier sauvegardé comme étant l'artefact
+  artifacts:
+    paths:
+      - alpinehelloworld.tar
 ```
+> ![7-Définition du JOB N°1 : BUILD DE L'IMAGE] ![](images/gitlab-ci_build.png)
+
+> ![8-Lancement automatique du pipeline avec le runner privé] ![](images/lancement-pipeline.png)
+
+> ![9-Vérification de sauvegarde de l'artifact] ![](images/verification-artifact.png)
 
 
 
