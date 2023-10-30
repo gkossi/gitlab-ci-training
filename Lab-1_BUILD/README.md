@@ -18,17 +18,17 @@ Pour mon travail j'aurai besoin de :
 
 1) Créer et enregistrer mon propre runner privé à partir d'un conteneur Docker qui sera chargé d'exécuter le pipeline
 
-Utiliser Virtualbox comme hyperviseur pour la création de machines virtuelles
-Utiliser Vagrant comme provisionneur d'infrastructure pour gérer la VM
-Installer Docker et Docker-compose sur la VM
-Construire un conteneur pour chaque module (Backend & Fronted)
-Faire interagir les conteneurs entre eux
-Fournir un registre privé pour stocker les images
+- Utiliser Virtualbox comme hyperviseur pour la création de machines virtuelles
+- Utiliser Vagrant comme provisionneur d'infrastructure pour gérer la VM
+- Installer Docker et Docker-compose sur la VM
+- Construire un conteneur pour chaque module (Backend & Fronted)
+- Faire interagir les conteneurs entre eux
+- Fournir un registre privé pour stocker les images
 
 # Mon plan de travail
 
 
-# Les fichiers et leurs roles chacun
+## Les fichiers et leurs roles chacun
 
 
 # REALISATIONS ETAPE PAR ETAPE
