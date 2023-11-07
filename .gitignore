@@ -2,3 +2,5 @@ HELP.md
 
 ### Directories ###
 .git/
+runner-installation/.vagrant
+runner-installation/*./
