@@ -43,9 +43,9 @@ TEST ACCEPTATION:
     - docker rm -vf webapp && echo "clean container"
 ```
 
-> ![1-Lancement automatique du pipeline avec le runner privé] ![](images/pipeline-succed.jpg)
+> ![1-Lancement automatique du pipeline avec le runner privé] ![](images/pipeline-dashboard.JPG)
 
-> ![2-Exécution du JOB N°2 : TEST D'ACCEPTANCE] ![](images/test-acceptance.jpg)
+> ![2-Exécution du JOB N°2 : TEST D'ACCEPTANCE] ![](images/test-acceptance.JPG)
 
 
 
