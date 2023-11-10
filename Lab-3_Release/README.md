@@ -50,6 +50,6 @@ RELEASE IMAGE:
 
 > ![2-Exécution du JOB N°3 : RELEASE IMAGE] ![](images/Release.JPG)
 
-> ![2-Release pushé dans le registry privé] ![](images/release-pushed-in-registry.JPG)
+> ![3-Release pushé dans le registry privé] ![](images/release-pushed-in-registry.JPG)
 
 
