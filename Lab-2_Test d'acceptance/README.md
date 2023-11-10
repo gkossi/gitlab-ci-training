@@ -42,11 +42,10 @@ TEST ACCEPTATION:
     #- curl "http://docker" | grep -q "Hello world!"
     - docker rm -vf webapp && echo "clean container"
 ```
-> ![7-Définition du JOB N°1 : BUILD DE L'IMAGE] ![](images/gitlab-ci_build.png)
 
-> ![8-Lancement automatique du pipeline avec le runner privé] ![](images/lancement-pipeline.png)
+> ![1-Lancement automatique du pipeline avec le runner privé] ![](images/pipeline-succed.jpg)
 
-> ![9-Vérification de sauvegarde de l'artifact] ![](images/verification-artifact.png)
+> ![2-Exécution du JOB N°2 : TEST D'ACCEPTANCE] ![](images/test-acceptance.jpg)
 
 
 
