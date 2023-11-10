@@ -56,7 +56,7 @@ gitlab/gitlab-runner:latest
 
 - Une fois notre runner créé, il faut l'enregistrer pour qu'il soit visible sur gitlab.com pour etre utilisé.
 
-Pour cela, je vais aller copier le token sur gitlab.com
+Pour cela, je vais aller copier le token sur gitlab.com : Settings => CI/CD => Runners
 
 > ![3-Copie du Token sur gitlab.com] ![](images/copie-token.jpg)
 
