@@ -5,6 +5,9 @@ Nom & Prénoms : GBENOU Kossi
 
 LinkedIn      : https://www.linkedin.com/in/gkossi/
 
+# Lien d'accès à mon projet sur GITLAB
+👉 https://gitlab.com/gkossi.devops/alpinehelloworld.git
+
 # LAB 3 : RELEASE
 - Créez un job qui va tagguer l'image avec deux tag, un qui représentera la branche et l'autre qui représentera le SHA court (voir variable d'environnement prédéfinies)
 - Pour donner le nom de votre image, vous allez définir ce dernier à l'aide de la variable d'environnement que vous appelerez lors du tag

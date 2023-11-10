@@ -5,6 +5,9 @@ Nom & Prénoms : GBENOU Kossi
 
 LinkedIn      : https://www.linkedin.com/in/gkossi/
 
+# Lien d'accès à mon projet sur GITLAB
+👉 https://gitlab.com/gkossi.devops/alpinehelloworld.git
+
 # LAB 2 : TEST D'ACCEPTANCE
 - Modifiez le pipeline afin de rajouter un job qui lance l'image buildée et la teste à l'aide de curl
 - Le curl doit tester si le site contient bien « Hello world ! »

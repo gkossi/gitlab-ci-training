@@ -5,6 +5,9 @@ Nom & Prénoms : GBENOU Kossi
 
 LinkedIn      : https://www.linkedin.com/in/gkossi/
 
+# Lien d'accès à mon projet sur GITLAB
+👉 https://gitlab.com/gkossi.devops/alpinehelloworld.git
+
 # LAB 3 : DEPLOIEMENT EN PROD ET STAGING
 - Créez un compte heroku
 - Créez un token pour l'api

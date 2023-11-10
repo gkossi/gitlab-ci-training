@@ -5,6 +5,9 @@ Nom & Prénoms : GBENOU Kossi
 
 LinkedIn      : https://www.linkedin.com/in/gkossi/
 
+# Lien d'accès à mon projet sur GITLAB
+👉 https://gitlab.com/gkossi.devops/alpinehelloworld.git
+
 # LAB 1 : BUILD
 - Créez un compte sur gitlab.com
 - Créez un repository
@@ -16,7 +19,9 @@ LinkedIn      : https://www.linkedin.com/in/gkossi/
 # Les besoins
 Pour mon travail j'aurai besoin de :
 
-1) Créer et enregistrer mon propre runner privé à partir d'un conteneur Docker qui sera chargé d'exécuter le pipeline
+Créer et enregistrer mon propre runner privé à partir d'un conteneur Docker qui sera chargé d'exécuter le pipeline
+
+Pour se faire, je vais :
 
 - Utiliser Virtualbox comme hyperviseur pour la création de machines virtuelles
 - Utiliser Vagrant comme provisionneur d'infrastructure pour gérer la VM
@@ -24,12 +29,6 @@ Pour mon travail j'aurai besoin de :
 - Construire un conteneur pour chaque module (Backend & Fronted)
 - Faire interagir les conteneurs entre eux
 - Fournir un registre privé pour stocker les images
-
-# Mon plan de travail
-
-
-## Les fichiers et leurs roles chacun
-
 
 # REALISATIONS ETAPE PAR ETAPE
 Pour réaliser ce projet de A à Z, je vais suivre les étapes suivantes :
@@ -121,9 +120,3 @@ build:
 > ![8-Lancement automatique du pipeline avec le runner privé] ![](images/lancement-pipeline.png)
 
 > ![9-Vérification de sauvegarde de l'artifact] ![](images/verification-artifact.png)
-
-
-
-
-
-
