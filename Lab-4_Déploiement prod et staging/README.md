@@ -57,6 +57,6 @@ DEPLOIEMENT PROD:
 
 > ![2-Exécution du JOB N°4&5 : DEPLOIEMENT PROD & STAGING] ![](images/prod-staging-successful.JPG)
 
-> ![3-Conteneurs Stage et Prod en cours d'exécution] ![](images/containers-prod-stage.JPG)
+> ![3-Conteneurs Stage et Prod en cours d'exécution] ![](images/containers-prod-stage.jpg)
 
 
