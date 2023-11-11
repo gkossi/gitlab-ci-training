@@ -91,19 +91,24 @@ NB : il faut s'assurer de désactiver le runner partagé sur gitlab.com
 ## Etape N°2: Configuration du fichier .gitlab-ci.yml pour la réalisation du BUILD de l'image
 
 ```bash
+
 #Définition de l'environnement d'exécution de notre pipeline
 image: docker:latest
 
 #Création du service permettant d'utiliser du docker dans docker
 services:
   - name: docker:dind
+    #alias: docker
 
 #Définition des différentes étapes
 stages:
   - Build image
+  - Test acceptation
+  - Release image
+  - Deploiement
 
-#JOB N°1 : Définition du job dans lequel sera exécuter l'étape du build de l'image
-build:
+#JOB N°1 (BUILD) : Définition du job dans lequel sera exécuter l'étape du build de l'image
+BUILD IMAGE:
   stage: Build image
   script:
     #Script pour builder l'image

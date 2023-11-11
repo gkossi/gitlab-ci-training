@@ -25,25 +25,25 @@ Et donc, on va continuer à utiliser l'environnement déjà mis en place dans le
 
 ```bash
 
-#JOB N°2 (TEST) :
+#JOB N°2 (TEST D'ACCEPTATION) :
 TEST ACCEPTATION:
   stage: Test acceptation
   script:
-    #On va supprimer l'image alpinehelloworld si elle existe déjà
-    - docker rmi alpinehelloworld || echo "image already deleted"
+    #On va supprimer le conteneur webapp si elle existe déjà
+    - docker rm -vf webapp && echo "conteneur déjà supprimé"
+    #On va ensuite supprimer l'image alpinehelloworld si elle existe déjà
+    - docker rmi alpinehelloworld || echo "image déjà supprimée"
     #On va récupérer à nouveau l'image alpinehelloworld
     - docker load < alpinehelloworld.tar
-    #On va supprimer le conteneur webapp s'il existe déjà
-    - docker rm -vf webapp || echo "container already cleaned"
     #On va créer à nouveau le conteneur webapp
-    - docker run -d -p 80:5000 -e PORT=5000 --name webapp alpinehelloworld
+    - docker run -d -p 8000:5000 -e PORT=5000 --name webapp alpinehelloworld
     - sleep 5
     #On va installer curl dans l'environnement docker:latest utilisé
     - apk --no-cache add curl
     - export IP_WEBAPP=$(docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' webapp)
     - curl "http://$IP_WEBAPP:5000" | grep -q "Hello world"
     #- curl "http://docker" | grep -q "Hello world!"
-    - docker rm -vf webapp && echo "clean container"
+    - docker rm -vf webapp && echo "conteneur déjà supprimé"
 ```
 
 > ![1-Lancement automatique du pipeline avec le runner privé] ![](images/pipeline-dashboard.JPG)

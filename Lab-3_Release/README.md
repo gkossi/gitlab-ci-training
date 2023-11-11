@@ -21,7 +21,7 @@ Et donc, on va continuer à utiliser l'environnement déjà mis en place dans le
 
 NB : On va d'abord configurer nos variables d'environnement : Settings => CI/CD => Variables
 
-IMAGE_NAME : registry.gitlab.com/gkossi.devops/alpinehelloworld
+IMAGE_NAME : registry.gitlab.com/username.group-name/artefact-name
 
 
 ## Etape N°3: Configuration du Job N°3 : Release
@@ -29,6 +29,8 @@ IMAGE_NAME : registry.gitlab.com/gkossi.devops/alpinehelloworld
 ```bash
 
 #JOB N°3 (RELEASE) :
+#NB : On va d'abord configurer nos variables d'environnement : Settings => CI/CD => Variables
+#IMAGE_NAME : registry.gitlab.com/username.group-name/artefact-name
 RELEASE IMAGE:
   stage: Release image
   script:
